@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:id="@+id/checkout_quantity"
+    android:scrollbars="vertical"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:minWidth="300dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Name"
+        android:textSize="22sp"
+        android:textColor="@color/colorAccentdark"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/checkout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="number"
+        android:layout_marginBottom="20dp"
+        android:textColorHighlight="@color/colorAccentdark"
+        android:shadowColor="@color/colorAccentdark"
+        android:textColorLink="@color/colorAccentdark"
+        android:textColorHint="@color/colorAccentdark"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Delivery Address"
+        android:textSize="22sp"
+        android:textColor="@color/colorAccentdark"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/checkout_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:inputType="number"
+        android:layout_marginBottom="20dp"
+        android:textColorHighlight="@color/colorAccentdark"
+        android:shadowColor="@color/colorAccentdark"
+        android:textColorLink="@color/colorAccentdark"
+        android:textColorHint="@color/colorAccentdark"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Phone Number"
+        android:textSize="22sp"
+        android:textColor="@color/colorAccentdark"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/checkout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:inputType="number"
+        android:layout_marginBottom="20dp"
+        android:textColorHighlight="@color/colorAccentdark"
+        android:shadowColor="@color/colorAccentdark"
+        android:textColorLink="@color/colorAccentdark"
+        android:textColorHint="@color/colorAccentdark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button4"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:text="CANCEL"/>
+        <Button
+            android:id="@+id/positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="OK"/>
+
+    </LinearLayout>
+
+</LinearLayout>

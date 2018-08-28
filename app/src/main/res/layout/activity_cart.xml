@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.example.tony.myapplication.cart">
+    tools:context="com.gromart.kunal.myapplication.cart"
+    android:focusableInTouchMode="true">
 
     <RelativeLayout
         android:id="@+id/no_item"
@@ -19,59 +21,162 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="167dp"
             android:gravity="center"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:text="You Have No Items In Your Cart" />
 
         <Button
             android:id="@+id/go_shop"
+            android:background="@drawable/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView2"
+            android:textColor="#fff"
             android:layout_centerHorizontal="true"
             android:text="Go Shopping" />
     </RelativeLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/cart_items"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/cart_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/cart_items">
-
-        <Button
-            android:id="@+id/checkout"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/cart_upper"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"
-            android:text="CHECKOUT" />
+            android:layout_above="@+id/cart_items"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccentdark">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button4"
-            android:layout_alignBottom="@+id/button4"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:text="Total Cost : "
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="Tap on an item to change it's quantity.
+Long Press an item and tap on the X icon to remove it from your cart"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="14sp" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/cart_cost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView"
-            android:layout_alignBottom="@+id/textView"
-            android:layout_toEndOf="@+id/textView"
-            android:text="Item Cost"
-            android:textSize="16sp" />
-    </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:id="@+id/cartcheck">
+
+                        <LinearLayout
+                            android:id="@+id/cart_bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/relativeLayout9"
+                                android:background="@color/white"
+                                android:layout_gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="Total"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/cart_cost"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Item Cost"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorAccentdark"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/relativeLayout101"
+                                android:background="@color/white"
+                                android:layout_gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/textView33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="Payment Method"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/cart_payment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Cash On Delivery"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorAccent"/>
+
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/checkout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/button2"
+                                android:text="CHECKOUT"
+                                android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/cart_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+            </ScrollView>
+
+    </LinearLayout>
+
 
 
 </RelativeLayout>

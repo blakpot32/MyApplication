@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_to_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/product_info_price"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/add_to_cart"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:clickable="true"-->
+        <!--app:srcCompat="@drawable/ic_add_shopping_cart_black_24dp"-->
+        <!--android:tint="#fff"-->
+        <!--app:backgroundTint="@color/colorAccent"-->
+        <!--android:layout_margin="15dp"-->
+        <!--app:fabSize="normal" />-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,171 +35,364 @@
                 android:layout_height="150dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
                 app:srcCompat="@drawable/cast_album_art_placeholder" />
 
-            <RelativeLayout
-                android:id="@+id/relativeLayout"
+            <LinearLayout
+                android:id="@+id/newaddcart"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/product_info_image"
-                android:layout_marginTop="18dp">
+                android:layout_margin="4dp"
+                android:background="#FF4500">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Name"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="ADD TO CART"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/product_info_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:text="Sample Product" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout2">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Price"
-                    android:textStyle="bold"
-                    android:id="@+id/textView8" />
-
-                <TextView
-                    android:id="@+id/product_info_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView8"
-                    android:text="399" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout4"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout3">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ingredients"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/product_info_ingredients"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:text="Sample Product" />
-
-            </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout">
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Weight"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/product_info_weight"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:text="Sample Product" />
+                    android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/product_info_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Sample Product"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorAccentdark" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@+id/relativeLayout"
+                    android:layout_below="@+id/relativeLayout">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Price"
+                        android:textColor="@color/colorAccentdark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/rupeesign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/textView8"
+                        android:text="₹"
+                        android:textColor="@color/colorAccentdark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/product_info_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/rupeesign"
+                        android:text="399"
+                        android:textColor="@color/colorAccentdark"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout5">
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/colorAccentdark">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Features"
-                    android:textStyle="bold"
-                    android:id="@+id/textView7" />
-
-                <TextView
-                    android:id="@+id/product_info_features"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/ingredientlayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView7"
-                    android:text="Sample Product" />
+                    android:layout_below="@+id/relativeLayout3"
+                    android:layout_margin="10dp">
 
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/t3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ingredients"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
 
-            <RelativeLayout
-                android:id="@+id/relativeLayout5"
+                    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                        android:id="@+id/content1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/t3"
+                        android:orientation="vertical"
+                        app:ael_duration="100"
+                        app:ael_expanded="false"
+                        app:ael_orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/product_info_ingredients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/t3"
+                        android:layout_centerVertical="true"
+                        android:text="Sample Product"
+                        android:textColor="#fff" />
+                    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/t3"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/t3"
+                        app:srcCompat="@drawable/ic_media_play_dark" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout4">
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/colorAccentdark">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Packaging Type"
-                    android:textStyle="bold"
-                    android:id="@+id/textView6" />
-
-                <TextView
-                    android:id="@+id/product_info_packaging"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/weightlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView6"
-                    android:text="Sample Product" />
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_margin="10dp">
 
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weight"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
 
-            <RelativeLayout
-                android:id="@+id/relativeLayout2"
+                    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                        android:id="@+id/content2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView4"
+                        android:orientation="vertical"
+                        app:ael_duration="100"
+                        app:ael_expanded="false"
+                        app:ael_orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/product_info_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView4"
+                        android:text="Sample Product"
+                        android:textColor="#fff" />
+                    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/textView4"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView4"
+                        app:srcCompat="@drawable/ic_media_play_dark" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout">
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/colorAccentdark">
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Disclaimer"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/product_info_disclaimer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/featureslayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView5"
-                    android:text="Sample Product" />
+                    android:layout_below="@+id/relativeLayout5"
+                    android:layout_margin="10dp">
 
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Features"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                        android:id="@+id/content3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView7"
+                        android:orientation="vertical"
+                        app:ael_duration="100"
+                        app:ael_expanded="false"
+                        app:ael_orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/product_info_features"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView7"
+                        android:text="Sample Product"
+                        android:textColor="#fff" />
+                    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/textView7"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView7"
+                        app:srcCompat="@drawable/ic_media_play_dark" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/colorAccentdark">
+
+                <RelativeLayout
+                    android:id="@+id/packaginglayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/relativeLayout4"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Packaging Type"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                        android:id="@+id/content4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView6"
+                        android:orientation="vertical"
+                        app:ael_duration="100"
+                        app:ael_expanded="false"
+                        app:ael_orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/product_info_packaging"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView6"
+                        android:text="Sample Product"
+                        android:textColor="#fff" />
+                    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/textView6"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView6"
+                        app:srcCompat="@drawable/ic_media_play_dark" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/colorAccentdark">
+
+                <RelativeLayout
+                    android:id="@+id/disclaimerlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Disclaimer"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                        android:id="@+id/content5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView5"
+                        android:orientation="vertical"
+                        app:ael_duration="100"
+                        app:ael_expanded="false"
+                        app:ael_orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/product_info_disclaimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView5"
+                        android:text="Sample Product"
+                        android:textColor="#fff" />
+                    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/textView5"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView5"
+                        app:srcCompat="@drawable/ic_media_play_dark" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
     </ScrollView>

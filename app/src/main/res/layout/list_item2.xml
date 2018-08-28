@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:backgroundTint="#1f1f1c">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -51,8 +52,10 @@
             android:paddingBottom="5dp"
             android:paddingTop="5dp"
             android:text="hdsjal"
-            android:textColor="@color/album_title"
-            android:textSize="@dimen/album_title" />
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="@dimen/album_title"
+            android:background="#f26530"/>
 
     </RelativeLayout>
 

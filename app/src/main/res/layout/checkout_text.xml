@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content" android:id="@+id/checkout_info"
+    android:scrollbars="vertical"
+    android:orientation="vertical" android:gravity="center">
+
+    <EditText
+        android:id="@+id/checkout_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkout_phone"
+        android:layout_alignStart="@+id/checkout_phone"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:scrollbars="vertical" />
 
     <EditText
         android:id="@+id/checkout_address"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkout_phone"
+        android:layout_alignStart="@+id/checkout_phone"
+        android:layout_marginBottom="5dp"
         android:ems="10"
+        android:hint="Address"
         android:inputType="textMultiLine"
-        android:lines="8"
         android:maxLines="10"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical" />
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address should be atleast 15 characters long"
+        android:padding="10dp"
+        android:layout_marginTop="-10dp"/>
+
+    <EditText
+        android:id="@+id/checkout_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:maxLength="13"
+        android:inputType="phone"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entering wrong details will result in inconvenience and the order not reaching you"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="-10dp"/>
+
+</LinearLayout>

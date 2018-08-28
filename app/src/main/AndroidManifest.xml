@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tony.myapplication">
+    package="com.gromart.kunal.myapplication"
+    android:versionCode="2">
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_gromart_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_gromart_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/MyTheme">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +32,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".groceryitems" />
+        <activity android:name=".stationeryitems" />
+        <activity android:name=".settings" />
         <activity android:name=".PostActivity" />
         <activity android:name=".ProductInfo" />
-        <activity android:name=".cart"></activity>
+        <activity android:name=".cart" />
+        <activity android:name=".myorders" />
+        <activity android:name=".privacypolicy" />
+        <activity android:name=".termsconditions" />
+        <activity android:name=".about" />
+        <activity android:name=".all_orders" />
+        <activity android:name=".completed_orders"></activity>
     </application>
 
 </manifest>

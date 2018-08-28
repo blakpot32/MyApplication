@@ -4,30 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tony.myapplication.PostActivity">
+    tools:context="com.gromart.kunal.myapplication.PostActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lli"
+        android:orientation="vertical">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         app:srcCompat="@drawable/common_google_signin_btn_icon_light_focused" />
 
+        <Button
+            android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Product Image" />
+
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView">
+        android:layout_below="@+id/lli">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <Button
-                android:id="@+id/post_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
 
             <EditText
                 android:id="@+id/productName"
@@ -43,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Weight"
-                android:inputType="number" />
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/productIngredients"

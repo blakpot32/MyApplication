@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/TitleSettings"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/colorAccentdark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="Touch one of the boxes below to change its information"
+            android:textAlignment="center"
+            />
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TitleSettings"
+        android:padding="10dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card1"
+        android:layout_margin="3dp"
+        android:backgroundTint="@color/colorAccent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:background="@drawable/button2">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textColor="#fff"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/settings_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView3"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="#fff"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            tools:text="Name" />
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card2"
+        android:layout_below="@+id/card1"
+        android:layout_margin="3dp"
+        android:textColor="#fff"
+        android:backgroundTint="@color/colorAccent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/card1"
+        android:textColor="#fff"
+        android:padding="10dp"
+        android:background="@drawable/button2">
+
+        <TextView
+            android:id="@+id/settings_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:text="Address"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/settings_address2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/settings_address"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:text="TextView"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            tools:text="Address" />
+
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/card3"
+        android:layout_below="@+id/card2"
+        android:layout_margin="3dp"
+        android:backgroundTint="@color/colorAccent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout7"
+            android:padding="10dp"
+            android:background="@drawable/button2">
+
+            <TextView
+                android:id="@+id/settings_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                android:text="Phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:id="@+id/settings_phone2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/settings_phone"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textColor="#fff"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                tools:text="Address" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:id="@+id/card4"-->
+        <!--android:layout_below="@+id/card3"-->
+        <!--android:layout_margin="3dp"-->
+        <!--android:backgroundTint="@color/colorAccent">-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/relativeLayout9"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_below="@+id/relativeLayout7"-->
+            <!--android:padding="10dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/settings_email"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="E-mail"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Title" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/settings_email2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@+id/settings_email"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="TextView"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"-->
+                <!--tools:text="Email Address" />-->
+
+
+        <!--</RelativeLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+    </RelativeLayout>
+
+</RelativeLayout>

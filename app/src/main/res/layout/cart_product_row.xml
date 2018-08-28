@@ -25,7 +25,8 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:layout_below="@+id/cart_display_image"
-            android:text="Sample Product" />
+            android:layout_marginRight="40dp"
+            android:text="Sample Product haoishdopaihfspihfaplihfas" />
 
         <TextView
             android:id="@+id/cart_display_price"
@@ -34,6 +35,7 @@
             android:padding="5dp"
             android:layout_below="@+id/cart_display_image"
             android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/cart_display_title"
             android:text="399" />
 
         <android.support.design.widget.FloatingActionButton

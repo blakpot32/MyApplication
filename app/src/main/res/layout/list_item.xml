@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:backgroundTint="@color/colorAccentdark">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,20 +41,39 @@
             android:layout_height="@dimen/album_cover_height"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="false"
+            android:maxHeight="100dp"
+            android:maxWidth="100dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/cast_album_art_placeholder" />
+            android:src="@drawable/bread"
+            android:tint="#b312005e"/>
 
-        <TextView
-            android:id="@+id/itemText"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/itemImage"
-            android:gravity="center_vertical|center"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
-            android:text="hdsjal"
-            android:textColor="@color/album_title"
-            android:textSize="@dimen/album_title" />
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/relativeLayout2">
+
+            <ImageView
+                android:id="@+id/lgo1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/gromartlogoheader1" />
+
+            <TextView
+                android:id="@+id/itemText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lgo1"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical|center"
+                android:text="hdsjal"
+                android:textColor="#fff"
+                android:textSize="@dimen/album_title"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

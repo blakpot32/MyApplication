@@ -14,7 +14,8 @@
         android:layout_marginBottom="20dp"
         android:layout_marginStart="20dp"
         android:gravity="bottom"
-        android:text="You are not logged in" />
+        android:textColor="#fff"
+        android:text="You are not logged in, to place an order please login" />
 
     <TextView
         android:id="@+id/navUsername"
@@ -24,6 +25,7 @@
         android:layout_alignStart="@+id/navUseremail"
         android:gravity="bottom"
         android:text="Welcome!"
+        android:textColor="#fff"
         android:textSize="24sp" />
 
 </RelativeLayout>

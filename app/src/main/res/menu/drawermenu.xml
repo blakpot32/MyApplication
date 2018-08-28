@@ -7,21 +7,57 @@
         <item
             android:id="@+id/db"
             android:enabled="true"
-            android:icon="@drawable/optionsbutton"
+            android:icon="@drawable/ic_dashboard_black_24px"
             android:title="@string/dashboard" />
+
         <item
             android:id="@+id/db_settings"
-            android:icon="@drawable/optionsbutton"
+            android:icon="@drawable/ic_settings_black_24px"
             android:title="@string/settings" />
+
         <item
             android:id="@+id/db_about"
-            android:icon="@drawable/optionsbutton"
-            android:title="@string/about" />
+            android:icon="@drawable/ic_local_shipping_black_24dp"
+            android:title="My Orders" />
         <item
             android:id="@+id/db_logout"
-            android:icon="@drawable/optionsbutton"
+            android:icon="@drawable/ic_subdirectory_arrow_right_black_logout_24px"
             android:title="@string/logout"
             android:visible="false" />
+    </group>
+
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/db_pp"
+            android:icon="@drawable/ic_info_black_24px"
+            android:title="Privacy Policy"
+            android:visible="true" />
+        <item
+            android:id="@+id/db_tc"
+            android:icon="@drawable/ic_info_black_24px"
+            android:title="Terms and Conditions"
+            android:visible="true" />
+    </group>
+    <group>
+        <item
+            android:id="@+id/db_aboutus"
+            android:icon="@drawable/ic_info_black_24px"
+            android:title="About us" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/allords"
+            android:enabled="true"
+            android:icon="@drawable/ic_local_shipping_black_24dp"
+            android:title="Pending Orders"
+            android:visible="true"/>
+
+        <item
+            android:id="@+id/db_comporders"
+            android:icon="@drawable/ic_add_circle_black_24dp"
+            android:title="Completed Orders"
+            android:visible="true"/>
     </group>
 
 </menu>
